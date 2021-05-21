@@ -1,8 +1,10 @@
 # how-to-write-tests-in-python
 
-Install dependendices:
-  pipenv install 
+Install dependencies:
+
+```pipenv install```
  
 Run tests:
-  pipenv run python test_main.py
+
+ ```pipenv run pytest test_main.py```
   
