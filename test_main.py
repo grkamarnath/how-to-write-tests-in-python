@@ -8,13 +8,13 @@ from main import get_response
 
 
 def test_get_response():
-    mock_clinet = Mock(spec=GithubAPI)
-    get_response(mock_clinet)
-    mock_clinet.get_github_response.assert_called_once()
+    mock_client = Mock(spec=GithubAPI)
+    get_response(mock_client)
+    mock_client.get_github_response.assert_called_once()
 
 
 def test_get_response_raises_http_error():
-    mock_clinet = Mock(spec=GithubAPI)
-    mock_clinet.get_github_response.side_effect = HTTPError
+    mock_client = Mock(spec=GithubAPI)
+    mock_client.get_github_response.side_effect = HTTPError
     with pytest.raises(HTTPError):
-        get_response(mock_clinet)
+        get_response(mock_client)
